@@ -12,7 +12,11 @@ namespace CalWinformsProject
 {
     public partial class Form1 : Form
     {
-
+        string userInput = string.Empty;
+        string deel1 = string.Empty;
+        string deel2 = string.Empty;
+        char teken;
+        double result = 0.0;
 
         /*if (TextBox.Text == "0" && TextBox.Text != null)  
             {  
@@ -20,8 +24,10 @@ namespace CalWinformsProject
             }  
             else  
             {  
-                TextBox.Text = TextBox.Text + "1";  
+                TextBox.Text = TextBox.Text + "1";
             }  */
+
+
 
         public Form1()
         {
@@ -44,7 +50,7 @@ namespace CalWinformsProject
 
         }
 
-        private void Button25_Click(object sender, EventArgs e)
+        private void Button25_Click(object sender, EventArgs e)//Divide Button
         {
             TextBox.Text += '/';
         }
@@ -69,59 +75,62 @@ namespace CalWinformsProject
 
         }
 
-        private void Button19_Click(object sender, EventArgs e)
+        private void Button19_Click(object sender, EventArgs e)//0 Button
         {
             TextBox.Text += '0';
         }
 
-        private void Button24_Click(object sender, EventArgs e)
+        private void Button24_Click(object sender, EventArgs e)//1 Button
         {
             TextBox.Text += '1';
         }
 
-        private void Button23_Click(object sender, EventArgs e)
+        private void Button23_Click(object sender, EventArgs e)//2 Button
         {
             TextBox.Text += '2';
         }
 
-        private void Button22_Click(object sender, EventArgs e)
+        private void Button22_Click(object sender, EventArgs e)//3 Button
         {
             TextBox.Text += '3';
         }
 
-        private void Button4_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)//4 Button
         {
             TextBox.Text += '4';
         }
 
-        private void Button10_Click(object sender, EventArgs e)
+        private void Button10_Click(object sender, EventArgs e) //5 Button
         {
             TextBox.Text += '5';
         }
 
-        private void Button9_Click(object sender, EventArgs e)
+        private void Button9_Click(object sender, EventArgs e) //6 Button
         {
             TextBox.Text += '6';
         }
 
-        private void Button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e) //7 Button
         {
             TextBox.Text += '7';
         }
 
-        private void Button5_Click(object sender, EventArgs e)
+        private void Button5_Click(object sender, EventArgs e) //8 Button
         {
             TextBox.Text += '8';
         }
 
-        private void Button6_Click(object sender, EventArgs e)
+        private void Button6_Click(object sender, EventArgs e) //9 button
         {
             TextBox.Text += '9';
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e) //Clear button
         {
-
+            this.TextBox.Text = "";
+            this.userInput = string.Empty;
+            this.deel1 = string.Empty;
+            this.deel2 = string.Empty;
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -129,27 +138,32 @@ namespace CalWinformsProject
             
         }
 
-        private void Button7_Click(object sender, EventArgs e)
+        private void Button7_Click(object sender, EventArgs e) //Mulitply Button
         {
             TextBox.Text += '*';
         }
 
-        private void Button18_Click(object sender, EventArgs e)
+        private void Button18_Click(object sender, EventArgs e)//Compute Button
         {
             TextBox.Text += '=';
         }
 
-        private void Button21_Click(object sender, EventArgs e)
+        private void Button21_Click(object sender, EventArgs e)//Add Button
         {
             TextBox.Text += '+';
         }
 
-        private void Button17_Click(object sender, EventArgs e)
+        private void Button17_Click(object sender, EventArgs e)//TBD Button
         {
             TextBox.Text += ',';
         }
 
-        private void RichTextBox1_TextChanged(object sender, EventArgs e)
+        private void TextBox_TextChanged(object sender, EventArgs e)//Reserved for calculations
+        {
+            
+        }
+
+        private void Button20_Click(object sender, EventArgs e)
         {
 
         }

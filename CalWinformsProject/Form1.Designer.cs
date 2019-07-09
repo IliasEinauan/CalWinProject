@@ -181,11 +181,12 @@
             // button11
             // 
             this.button11.BackColor = System.Drawing.SystemColors.Control;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.Location = new System.Drawing.Point(174, 210);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(75, 58);
             this.button11.TabIndex = 13;
-            this.button11.Text = "Del";
+            this.button11.Text = "←";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.Button11_Click);
             // 
@@ -286,6 +287,7 @@
             this.button20.TabIndex = 22;
             this.button20.Text = "±";
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.Button20_Click);
             // 
             // button21
             // 
@@ -341,9 +343,8 @@
             this.TextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TextBox.Size = new System.Drawing.Size(318, 86);
             this.TextBox.TabIndex = 27;
-            this.TextBox.Text = "0";
-            this.TextBox.ZoomFactor = 6F;
-            this.TextBox.TextChanged += new System.EventHandler(this.RichTextBox1_TextChanged);
+            this.TextBox.Text = "";
+            this.TextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // button25
             // 
