@@ -338,8 +338,10 @@
             // 
             // TextBox
             // 
+            this.TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox.Location = new System.Drawing.Point(12, 25);
             this.TextBox.Name = "TextBox";
+            this.TextBox.ReadOnly = true;
             this.TextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TextBox.Size = new System.Drawing.Size(318, 86);
             this.TextBox.TabIndex = 27;

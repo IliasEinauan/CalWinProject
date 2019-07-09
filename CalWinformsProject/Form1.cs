@@ -25,6 +25,44 @@ namespace CalWinformsProject
             else  
             {  
                 TextBox.Text = TextBox.Text + "1";
+
+
+            
+            operand2 = input;
+            double num1, num2;
+            double.TryParse(operand1, out num1);
+            double.TryParse(operand2, out num2);
+
+            if (operation == '+')
+            {
+                result = num1 + num2;
+                textBox1.Text = result.ToString();
+            }
+            else if (operation == '-')
+            {
+                result = num1 - num2;
+                textBox1.Text = result.ToString();
+            }
+            else if (operation == '*')
+            {
+                result = num1 * num2;
+                textBox1.Text = result.ToString();
+            }
+            else if (operation == '/')
+            {
+                if (num2 != 0)
+                {
+                    result = num1 / num2;
+                    textBox1.Text = result.ToString();
+                }
+                else
+                {
+                    textBox1.Text = "Kan niet!";
+                }
+
+            }
+
+
             }  */
 
 
@@ -36,13 +74,13 @@ namespace CalWinformsProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-             
+
 
         }
 
         private void Button8_Click(object sender, EventArgs e)
         {
-                
+
         }
 
         private void Button16_Click(object sender, EventArgs e)
@@ -77,52 +115,72 @@ namespace CalWinformsProject
 
         private void Button19_Click(object sender, EventArgs e)//0 Button
         {
-            TextBox.Text += '0';
+            this.TextBox.Text = "";
+            userInput += "0";
+            this.TextBox.Text += userInput;
         }
 
         private void Button24_Click(object sender, EventArgs e)//1 Button
         {
-            TextBox.Text += '1';
+            this.TextBox.Text = "";
+            userInput += "1";
+            this.TextBox.Text += userInput;
         }
 
         private void Button23_Click(object sender, EventArgs e)//2 Button
         {
-            TextBox.Text += '2';
+            this.TextBox.Text = "";
+            userInput += "2";
+            this.TextBox.Text += userInput;
         }
 
         private void Button22_Click(object sender, EventArgs e)//3 Button
         {
-            TextBox.Text += '3';
+            this.TextBox.Text = "";
+            userInput += "3";
+            this.TextBox.Text += userInput;
         }
 
         private void Button4_Click(object sender, EventArgs e)//4 Button
         {
-            TextBox.Text += '4';
+            this.TextBox.Text = "";
+            userInput += "4";
+            this.TextBox.Text += userInput;
         }
 
         private void Button10_Click(object sender, EventArgs e) //5 Button
         {
-            TextBox.Text += '5';
+            this.TextBox.Text = "";
+            userInput += "5";
+            this.TextBox.Text += userInput;
         }
 
         private void Button9_Click(object sender, EventArgs e) //6 Button
         {
-            TextBox.Text += '6';
+            this.TextBox.Text = "";
+            userInput += "6";
+            this.TextBox.Text += userInput;
         }
 
         private void Button3_Click(object sender, EventArgs e) //7 Button
         {
-            TextBox.Text += '7';
+            this.TextBox.Text = "";
+            userInput += "7";
+            this.TextBox.Text += userInput;
         }
 
         private void Button5_Click(object sender, EventArgs e) //8 Button
         {
-            TextBox.Text += '8';
+            this.TextBox.Text = "";
+            userInput += "8";
+            this.TextBox.Text += userInput;
         }
 
         private void Button6_Click(object sender, EventArgs e) //9 button
         {
-            TextBox.Text += '9';
+            this.TextBox.Text = "";
+            userInput += "9";
+            this.TextBox.Text += userInput;
         }
 
         private void Button2_Click(object sender, EventArgs e) //Clear button
@@ -135,7 +193,7 @@ namespace CalWinformsProject
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Button7_Click(object sender, EventArgs e) //Mulitply Button
@@ -145,12 +203,46 @@ namespace CalWinformsProject
 
         private void Button18_Click(object sender, EventArgs e)//Compute Button
         {
-            TextBox.Text += '=';
-        }
+            deel2 = userInput;
+            double num1, num2;
+            double.TryParse(deel1, out num1);
+            double.TryParse(deel2, out num2);
 
+            if (teken == '+')
+            {
+                result = num1 + num2;
+                TextBox.Text = result.ToString();
+
+            }
+            else if (teken == '-')
+            {
+                result = num1 - num2;
+                TextBox.Text = result.ToString();
+            }
+            else if (teken == '*')
+            {
+                result = num1 * num2;
+                TextBox.Text = result.ToString();
+            }
+            else if (teken == '/')
+            {
+                if (num2 != 0)
+                {
+                    result = num1 / num2;
+                    TextBox.Text = result.ToString();
+                }
+                else
+                {
+                    TextBox.Text = "Kan niet!";
+                }
+                //Maak een temp var aan waarin de uitkomst word in opgeslagen. Stel deze gelijk aan num1.
+            }
+        }
         private void Button21_Click(object sender, EventArgs e)//Add Button
         {
-            TextBox.Text += '+';
+            deel1 = userInput;
+            teken = '+';
+            userInput = string.Empty;
         }
 
         private void Button17_Click(object sender, EventArgs e)//TBD Button
@@ -160,7 +252,7 @@ namespace CalWinformsProject
 
         private void TextBox_TextChanged(object sender, EventArgs e)//Reserved for calculations
         {
-            
+
         }
 
         private void Button20_Click(object sender, EventArgs e)
