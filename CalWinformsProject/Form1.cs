@@ -49,44 +49,48 @@ namespace CalWinformsProject
 
         }
 
-        private void Button8_Click(object sender, EventArgs e)
-        {
-            num1 = decimal.Parse(TextBox.Text);
-            operation = ("-");
-            TextBox.Text = "";
-        }
-
-        private void Button16_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Button25_Click(object sender, EventArgs e)//Divide Button
         {
-            num1 = decimal.Parse(TextBox.Text);
-            operation = ("/");
-            TextBox.Text = "";
+            try
+            {
+                num1 = decimal.Parse(TextBox.Text);
+                operation = ("/");
+                TextBox.Text = "";
+            }
+            catch
+            {
+
+            }
         }
 
         private void Button11_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                TextBox.Text = TextBox.Text.Remove(TextBox.Text.Length - 1);
+            }
+            catch{ }
+            
         }
 
         private void Button26_Click(object sender, EventArgs e)
         {
+            try
+            {
+                num1 = decimal.Parse(TextBox.Text);
+                operation = ("%");
+                TextBox.Text = "";
+            }
+            catch
+            {
+
+            }
+
+            //Math.DivRem(Convert.ToInt32(num1), Convert.ToInt32(num2), out int result);
+           // TextBox.Text = Convert.ToString(result);
 
         }
 
-        private void Button14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button13_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Button19_Click(object sender, EventArgs e)//0 Button
         {
@@ -179,16 +183,24 @@ namespace CalWinformsProject
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            TextBox.Text = "";
         }
 
         private void Button7_Click(object sender, EventArgs e) //Mulitply Button
         {
             //TextBox.Text += '*';
             //this.TextBox.Text += userInput;
-            num1 = decimal.Parse(TextBox.Text);
-            operation = ("*");
-            TextBox.Text = "";
+            try
+            {
+                num1 = decimal.Parse(TextBox.Text);
+                operation = ("*");
+                TextBox.Text = "";
+            }
+            catch
+            {
+
+            }
+               
         }
 
         private void Button18_Click(object sender, EventArgs e)//Compute Button
@@ -199,15 +211,8 @@ namespace CalWinformsProject
                 case "+":TextBox.Text = (num1 + num2).ToString();break;
                 case "-":TextBox.Text = (num1 - num2).ToString();break;
                 case "*": TextBox.Text = (num1 * num2).ToString();break;
-                case "/":
-                    if (num2 != 0)
-                    {
-                        TextBox.Text = (num1 / num2).ToString(); break;
-                    }
-                    else
-                    {
-                        TextBox.Text = "Nope"; TextBox.Text = "";  break;
-                    }
+                case "/": if (num2 != 0) {TextBox.Text = (num1 / num2).ToString(); break;}
+                          else{TextBox.Text = "Nope"; TextBox.Text = "";  break; }
                 case "^":TextBox.Text = (int.Parse(num1.ToString()) ^ int.Parse(num2.ToString())).ToString();break;
                 case "%":TextBox.Text = (num1 % num2).ToString();break;
             }
@@ -252,9 +257,16 @@ namespace CalWinformsProject
         }
         private void Button21_Click(object sender, EventArgs e)//Add Button
         {
-            num1 = decimal.Parse(TextBox.Text);
-            operation = ("+");
-            TextBox.Text = "";
+            try
+            {
+                num1 = decimal.Parse(TextBox.Text);
+                operation = ("+");
+                TextBox.Text = "";
+            }
+            catch
+            {
+
+            }
         }
 
         private void Button17_Click(object sender, EventArgs e)//TBD Button
@@ -262,24 +274,25 @@ namespace CalWinformsProject
             TextBox.Text += ',';
         }
 
-        private void TextBox_TextChanged(object sender, EventArgs e)//Reserved for calculations
-        {
-
-        }
 
         private void Button20_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                decimal numswitch = Convert.ToDecimal(TextBox.Text);
+            }
+            catch {}
         }
 
-        private void Button15_Click(object sender, EventArgs e)
+        private void Button8_Click_1(object sender, EventArgs e)
         {
 
-        }
-
-        private void Button12_Click(object sender, EventArgs e)
-        {
-
+            try
+            {
+                num1 = decimal.Parse(TextBox.Text);
+                operation = ("-"); TextBox.Text = "";
+            }
+            catch { }
         }
     }
 }
