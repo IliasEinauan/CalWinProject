@@ -12,11 +12,11 @@ namespace CalWinformsProject
 {
     public partial class Form1 : Form
     {
-        string userInput = string.Empty;
-        string deel1 = string.Empty;
-        string deel2 = string.Empty;
-        char teken;
-        double result = 0.0;
+        //string userInput = string.Empty;
+        //string deel1 = string.Empty;
+        //string deel2 = string.Empty;
+        //char teken;
+        //double result = 0.0;
 
         /*if (TextBox.Text == "0" && TextBox.Text != null)  
             {  
@@ -25,47 +25,18 @@ namespace CalWinformsProject
             else  
             {  
                 TextBox.Text = TextBox.Text + "1";
-
-
-            
-            operand2 = input;
-            double num1, num2;
-            double.TryParse(operand1, out num1);
-            double.TryParse(operand2, out num2);
-
-            if (operation == '+')
-            {
-                result = num1 + num2;
-                textBox1.Text = result.ToString();
-            }
-            else if (operation == '-')
-            {
-                result = num1 - num2;
-                textBox1.Text = result.ToString();
-            }
-            else if (operation == '*')
-            {
-                result = num1 * num2;
-                textBox1.Text = result.ToString();
-            }
-            else if (operation == '/')
-            {
-                if (num2 != 0)
-                {
-                    result = num1 / num2;
-                    textBox1.Text = result.ToString();
-                }
-                else
-                {
-                    textBox1.Text = "Kan niet!";
-                }
-
-            }
-
-
             }  */
 
-
+        decimal num1;
+        decimal num2;
+        string operation;
+        private void input(string a)
+        {
+            if (TextBox.Text == "0")
+                TextBox.Text = a;
+            else
+                TextBox.Text += a;
+        }
 
         public Form1()
         {
@@ -80,7 +51,9 @@ namespace CalWinformsProject
 
         private void Button8_Click(object sender, EventArgs e)
         {
-
+            num1 = decimal.Parse(TextBox.Text);
+            operation = ("-");
+            TextBox.Text = "";
         }
 
         private void Button16_Click(object sender, EventArgs e)
@@ -90,7 +63,9 @@ namespace CalWinformsProject
 
         private void Button25_Click(object sender, EventArgs e)//Divide Button
         {
-            TextBox.Text += '/';
+            num1 = decimal.Parse(TextBox.Text);
+            operation = ("/");
+            TextBox.Text = "";
         }
 
         private void Button11_Click(object sender, EventArgs e)
@@ -115,80 +90,91 @@ namespace CalWinformsProject
 
         private void Button19_Click(object sender, EventArgs e)//0 Button
         {
-            this.TextBox.Text = "";
-            userInput += "0";
-            this.TextBox.Text += userInput;
+
+            //userInput += "0";
+            //this.TextBox.Text += userInput;
+            input("0");
+
         }
 
         private void Button24_Click(object sender, EventArgs e)//1 Button
         {
-            this.TextBox.Text = "";
-            userInput += "1";
-            this.TextBox.Text += userInput;
+
+            //userInput += "1";
+            //this.TextBox.Text += userInput;
+            input("1");
         }
 
         private void Button23_Click(object sender, EventArgs e)//2 Button
         {
-            this.TextBox.Text = "";
-            userInput += "2";
-            this.TextBox.Text += userInput;
+
+            //userInput += "2";
+            //this.TextBox.Text += userInput;
+            input("2");
         }
 
         private void Button22_Click(object sender, EventArgs e)//3 Button
         {
-            this.TextBox.Text = "";
-            userInput += "3";
-            this.TextBox.Text += userInput;
+
+            //userInput += "3";
+            //this.TextBox.Text += userInput;
+            input("3");
         }
 
         private void Button4_Click(object sender, EventArgs e)//4 Button
         {
-            this.TextBox.Text = "";
-            userInput += "4";
-            this.TextBox.Text += userInput;
+
+            //userInput += "4";
+            //this.TextBox.Text += userInput;
+            input("4");
         }
 
         private void Button10_Click(object sender, EventArgs e) //5 Button
         {
-            this.TextBox.Text = "";
-            userInput += "5";
-            this.TextBox.Text += userInput;
+
+            //userInput += "5";
+            //this.TextBox.Text += userInput;
+            input("5");
         }
 
         private void Button9_Click(object sender, EventArgs e) //6 Button
         {
-            this.TextBox.Text = "";
-            userInput += "6";
-            this.TextBox.Text += userInput;
+
+            //userInput += "6";
+            //this.TextBox.Text += userInput;
+            input("6");
         }
 
         private void Button3_Click(object sender, EventArgs e) //7 Button
         {
-            this.TextBox.Text = "";
-            userInput += "7";
-            this.TextBox.Text += userInput;
+
+            //userInput += "7";
+            //this.TextBox.Text += userInput;
+            input("7");
         }
 
         private void Button5_Click(object sender, EventArgs e) //8 Button
         {
-            this.TextBox.Text = "";
-            userInput += "8";
-            this.TextBox.Text += userInput;
+
+            //userInput += "8";
+            //this.TextBox.Text += userInput;
+            input("8");
         }
 
         private void Button6_Click(object sender, EventArgs e) //9 button
         {
-            this.TextBox.Text = "";
-            userInput += "9";
-            this.TextBox.Text += userInput;
+
+            //userInput += "9";
+            //this.TextBox.Text += userInput;
+            input("9");
         }
 
         private void Button2_Click(object sender, EventArgs e) //Clear button
         {
-            this.TextBox.Text = "";
-            this.userInput = string.Empty;
-            this.deel1 = string.Empty;
-            this.deel2 = string.Empty;
+            //this.TextBox.Text = "";
+            //this.userInput = string.Empty;
+            //this.deel1 = string.Empty;
+            //this.deel2 = string.Empty;
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -198,51 +184,77 @@ namespace CalWinformsProject
 
         private void Button7_Click(object sender, EventArgs e) //Mulitply Button
         {
-            TextBox.Text += '*';
+            //TextBox.Text += '*';
+            //this.TextBox.Text += userInput;
+            num1 = decimal.Parse(TextBox.Text);
+            operation = ("*");
+            TextBox.Text = "";
         }
 
         private void Button18_Click(object sender, EventArgs e)//Compute Button
         {
-            deel2 = userInput;
-            double num1, num2;
-            double.TryParse(deel1, out num1);
-            double.TryParse(deel2, out num2);
+            num2 = decimal.Parse(TextBox.Text);
+            switch (operation)
+            {
+                case "+":TextBox.Text = (num1 + num2).ToString();break;
+                case "-":TextBox.Text = (num1 - num2).ToString();break;
+                case "*": TextBox.Text = (num1 * num2).ToString();break;
+                case "/":
+                    if (num2 != 0)
+                    {
+                        TextBox.Text = (num1 / num2).ToString(); break;
+                    }
+                    else
+                    {
+                        TextBox.Text = "Nope"; TextBox.Text = "";  break;
+                    }
+                case "^":TextBox.Text = (int.Parse(num1.ToString()) ^ int.Parse(num2.ToString())).ToString();break;
+                case "%":TextBox.Text = (num1 % num2).ToString();break;
+            }
+            //deel2 = userInput;
+            //double num1, num2;
+            //double.TryParse(deel1, out num1);
+            //double.TryParse(deel2, out num2);
 
-            if (teken == '+')
-            {
-                result = num1 + num2;
-                TextBox.Text = result.ToString();
+            //if (teken == '+')
+            //{
+            //    result = num1 + num2;
+            //    TextBox.Text = result.ToString();
 
-            }
-            else if (teken == '-')
-            {
-                result = num1 - num2;
-                TextBox.Text = result.ToString();
-            }
-            else if (teken == '*')
-            {
-                result = num1 * num2;
-                TextBox.Text = result.ToString();
-            }
-            else if (teken == '/')
-            {
-                if (num2 != 0)
-                {
-                    result = num1 / num2;
-                    TextBox.Text = result.ToString();
-                }
-                else
-                {
-                    TextBox.Text = "Kan niet!";
-                }
-                //Maak een temp var aan waarin de uitkomst word in opgeslagen. Stel deze gelijk aan num1.
-            }
+            //}
+            //else if (teken == '-')
+            //{
+            //    result = num1 - num2;
+            //    TextBox.Text = result.ToString();
+            //}
+            //else if (teken == '*')
+            //{
+            //    result = num1 * num2;
+            //    TextBox.Text = result.ToString();
+            //}
+            //else if (teken == '/')
+            //{
+            //    if (num2 != 0)
+            //    {
+            //        result = num1 / num2;
+            //        TextBox.Text = result.ToString();
+            //    }
+            //    else
+            //    {
+            //        TextBox.Text = "Kan niet!";
+            //    }
+            //Maak een temp var aan waarin de uitkomst word in opgeslagen. Stel deze gelijk aan num1.
+
+
+
+           
+
         }
         private void Button21_Click(object sender, EventArgs e)//Add Button
         {
-            deel1 = userInput;
-            teken = '+';
-            userInput = string.Empty;
+            num1 = decimal.Parse(TextBox.Text);
+            operation = ("+");
+            TextBox.Text = "";
         }
 
         private void Button17_Click(object sender, EventArgs e)//TBD Button
@@ -256,6 +268,16 @@ namespace CalWinformsProject
         }
 
         private void Button20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button12_Click(object sender, EventArgs e)
         {
 
         }
