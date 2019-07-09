@@ -13,13 +13,14 @@ namespace CalWinformsProject
     public partial class Form1 : Form
     {
 
-        /*if (textBox1.Text == "0" && textBox1.Text != null)  
+
+        /*if (TextBox.Text == "0" && TextBox.Text != null)  
             {  
-                textBox1.Text = "1";  
+                TextBox.Text = "1";  
             }  
             else  
             {  
-                textBox1.Text = textBox1.Text + "1";  
+                TextBox.Text = TextBox.Text + "1";  
             }  */
 
         public Form1()
@@ -45,7 +46,7 @@ namespace CalWinformsProject
 
         private void Button25_Click(object sender, EventArgs e)
         {
-            ResultTextBox.Text += '/';
+            TextBox.Text += '/';
         }
 
         private void Button11_Click(object sender, EventArgs e)
@@ -70,52 +71,52 @@ namespace CalWinformsProject
 
         private void Button19_Click(object sender, EventArgs e)
         {
-            ResultTextBox.Text += '0';
+            TextBox.Text += '0';
         }
 
         private void Button24_Click(object sender, EventArgs e)
         {
-            ResultTextBox.Text += '1';
+            TextBox.Text += '1';
         }
 
         private void Button23_Click(object sender, EventArgs e)
         {
-            ResultTextBox.Text += '2';
+            TextBox.Text += '2';
         }
 
         private void Button22_Click(object sender, EventArgs e)
         {
-            ResultTextBox.Text += '3';
+            TextBox.Text += '3';
         }
 
         private void Button4_Click(object sender, EventArgs e)
         {
-            ResultTextBox.Text += '4';
+            TextBox.Text += '4';
         }
 
         private void Button10_Click(object sender, EventArgs e)
         {
-            ResultTextBox.Text += '5';
+            TextBox.Text += '5';
         }
 
         private void Button9_Click(object sender, EventArgs e)
         {
-            ResultTextBox.Text += '6';
+            TextBox.Text += '6';
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            ResultTextBox.Text += '7';
+            TextBox.Text += '7';
         }
 
         private void Button5_Click(object sender, EventArgs e)
         {
-            ResultTextBox.Text += '8';
+            TextBox.Text += '8';
         }
 
         private void Button6_Click(object sender, EventArgs e)
         {
-            ResultTextBox.Text += '9';
+            TextBox.Text += '9';
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -130,22 +131,22 @@ namespace CalWinformsProject
 
         private void Button7_Click(object sender, EventArgs e)
         {
-            ResultTextBox.Text += '*';
+            TextBox.Text += '*';
         }
 
         private void Button18_Click(object sender, EventArgs e)
         {
-            ResultTextBox.Text += '=';
+            TextBox.Text += '=';
         }
 
         private void Button21_Click(object sender, EventArgs e)
         {
-            ResultTextBox.Text += '+';
+            TextBox.Text += '+';
         }
 
         private void Button17_Click(object sender, EventArgs e)
         {
-            ResultTextBox.Text += ',';
+            TextBox.Text += ',';
         }
 
         private void RichTextBox1_TextChanged(object sender, EventArgs e)

@@ -53,7 +53,7 @@
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.TextBox = new System.Windows.Forms.RichTextBox();
             this.button25 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -334,16 +334,16 @@
             this.button24.UseVisualStyleBackColor = false;
             this.button24.Click += new System.EventHandler(this.Button24_Click);
             // 
-            // richTextBox1
+            // TextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 25);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.richTextBox1.Size = new System.Drawing.Size(318, 86);
-            this.richTextBox1.TabIndex = 27;
-            this.richTextBox1.Text = "0";
-            this.richTextBox1.ZoomFactor = 6F;
-            this.richTextBox1.TextChanged += new System.EventHandler(this.RichTextBox1_TextChanged);
+            this.TextBox.Location = new System.Drawing.Point(12, 25);
+            this.TextBox.Name = "TextBox";
+            this.TextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TextBox.Size = new System.Drawing.Size(318, 86);
+            this.TextBox.TabIndex = 27;
+            this.TextBox.Text = "0";
+            this.TextBox.ZoomFactor = 6F;
+            this.TextBox.TextChanged += new System.EventHandler(this.RichTextBox1_TextChanged);
             // 
             // button25
             // 
@@ -375,7 +375,7 @@
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(339, 535);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.TextBox);
             this.Controls.Add(this.button24);
             this.Controls.Add(this.button23);
             this.Controls.Add(this.button22);
@@ -435,7 +435,7 @@
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox TextBox;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button button26;
     }
